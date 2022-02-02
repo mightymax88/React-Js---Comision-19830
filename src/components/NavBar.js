@@ -28,4 +28,3 @@ const Navbar = () =>{
 };
 
 export default Navbar;
-// ReactDOM.render(<CartWidget />, document.getElementById('root'));

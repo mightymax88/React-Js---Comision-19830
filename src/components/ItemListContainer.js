@@ -1,8 +1,8 @@
 import React from 'react';
 
-function ItemListContainer(){
+function ItemListContainer(props){
     return(
-        <h2>Lista de Juegos Switch (ItemListContainer)</h2>
+        <h2>{props.saludo}</h2>
     );
 }
 

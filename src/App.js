@@ -8,7 +8,7 @@ function App() {
       {/* Incorporación de navbar dentro dle componente NavBAR.js */}
       <NavBar />
       <h1>Sitio de compra juegos Nintendo Switch en Argentina</h1>
-      <ItemListContainer />
+      <ItemListContainer saludo="Bienvenido a nuestro sitio web!"/>
     </div>
   );
 }
