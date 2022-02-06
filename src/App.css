@@ -54,3 +54,17 @@
   display: flex;
   justify-content:flex-end;
 }
+
+input{
+  text-align: center;
+}
+
+.cosaCompra{
+  border-style: solid;
+  border-color: red;
+}
+
+.juego-container{
+  display:inline-block;
+  margin-inline: 15px;
+}
