@@ -1,13 +1,14 @@
 import React from 'react';
+import ItemList from './ItemList';
 
-function ItemListContainer(props){
+function ItemListContainer({saludo,games}){
     return(
         <div>
-            <div>
-                <h2>{props.saludo}</h2>
+            <div className='tituloILC'>
+                <h2>{saludo}</h2>
             </div>
-            <div>
-
+            <div className='cuerpoILC'>
+                <ItemList games={games}/>
             </div>
         </div>
     );
