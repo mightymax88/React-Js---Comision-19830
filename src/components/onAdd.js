@@ -2,9 +2,9 @@
 const onAdd = (cant,stockItem) => {
     return new Promise((resolve,reject) => {
         if (stockItem===0) {
-            alert("No hay STOCK!")
+            resolve(alert("No hay STOCK!"));
         } else {
-            alert("Compró "+cant)
+            reject(alert("Se agregarán "+cant+" unidades al Carrito"));
         }
     })
 }

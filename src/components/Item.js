@@ -1,4 +1,8 @@
-const Juego = (props) => {
+//import React,{useEffect, useState} from 'react';
+import ItemCount from './ItemCount';
+import onAdd from './onAdd';
+
+const Item = (props) => {
     return(
         <div className="juego-container">
             <div className="juego-image">
@@ -9,9 +13,12 @@ const Juego = (props) => {
                 <h4>Precio: ${props.price}</h4>
                 <p>Categoría: {props.category}</p>
                 <p>{props.description}</p>
+                <p>Stock disponible: {parseInt(props.stock)}</p>
+                <ItemCount stock={parseInt(props.stock)} initial="1" onAdd={onAdd}/>
             </div>
+            
         </div>
     );
 }
 
-export default Juego
+export default Item

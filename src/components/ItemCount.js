@@ -1,7 +1,6 @@
 import React,{useEffect, useState} from 'react';
-import onAdd from './onAdd';
 
-function ItemCount({stock,initial}){
+function ItemCount({stock,initial,onAdd}){
     const [stockItem] = useState(parseInt(stock));
     const [cantItem, setCantItem] = useState(parseInt(stockItem===0?"0":initial));
     let textButton = "Agregar al carrito";
@@ -28,8 +27,7 @@ function ItemCount({stock,initial}){
     return(
         <div>
             <div id="cosaCompra">
-                <p id="pitem">  <br/><br/>
-                        <p>Juego #1</p>
+                <p id="pitem"> 
                         <input className="ip" type="button" value="-" onClick={() => restoCant()}/>
                         <input className="ip" id="txCart" type="number" value={cantItem}/>
                         <input className="ip" type="button" value="+" onClick={() => sumoCant()}/>
