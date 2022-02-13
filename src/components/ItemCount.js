@@ -1,10 +1,10 @@
 import React,{useEffect, useState} from 'react';
 
 function ItemCount({stock,initial,onAdd}){
-    const [stockItem] = useState(parseInt(stock));
-    const [cantItem, setCantItem] = useState(parseInt(stockItem===0?"0":initial));
+    const [stockItem,setStock] = useState([]);
+    const [cantItem, setCantItem] = useState([]);
     let textButton = "Agregar al carrito";
-    if(stockItem===0){
+    if(parseInt(stock)===0){
         textButton = "Sin stock";
     }
     const restoCant = () => {
@@ -17,12 +17,11 @@ function ItemCount({stock,initial,onAdd}){
             setCantItem(cantItem+1);
         }
     }
-    //componentDidMount - Para uso futuro
-    useEffect(()=> {
-    },[]);
     //componentDidUpdate - Para uso futuro
-    useEffect(() => {
-    },[cantItem]);
+    useEffect(()=> {
+        setStock(stock)
+        setCantItem(parseInt((stock==="0"||stock===0)?"0":initial))
+    },[stock,initial]);
     //Return
     return(
         <div>
