@@ -5,7 +5,7 @@ import onAdd from './onAdd';
 const ItemDetail = (props) => {
     const games=props.games;
     return(
-        <div className="juego-container col-10">
+        <div className="juego-container-detail col-10">
             <div className="row">
                 <div className="juego-image col-3">
                     <img src={games.thumbnail} alt={games.title} width={"300px"}/>

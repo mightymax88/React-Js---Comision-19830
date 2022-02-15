@@ -6,6 +6,7 @@ function ItemList(props){
         games.map(item=>
             <Item
             key={item.id}
+            id={item.id}
             title={item.title}
             price={item.price}
             thumbnail={item.thumbnail}
