@@ -1,3 +1,26 @@
+# NintendAR - Sitio web para compra de juegos de Nintendo Switch en Argentina
+(desarrollado por Maximiliano Filipuzzi)
+
+## Inicio
+Muestra la lista de juegos comercializados, con o sin stock.
+
+## NavBar
+Permite mostrar todos los juegos (apretando en el logo), o filtrar por Saga (Pokemón, Mario, etc.).
+
+## Descripción
+Al seleccionar cada juego se puede ver el detalle, con más información y la posibilidad de agregar al carrito (siempre y cuando haya stock, y nunca
+más unidades que el stcok disponible)
+
+
+# Página en desarrollo, se preveen actualizaciones
+Última actualización del ReadMe = 15/02/2022
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
