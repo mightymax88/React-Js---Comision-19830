@@ -6,6 +6,7 @@ import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import ItemListContainer from './components/ItemListContainer.js';
 import ItemDetailContainer from './components/ItemDetailContainer';
+import Cart from './components/Cart';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route exact path='/' element={<ItemListContainer/>}/>
           <Route path='/category/:idSaga' element={<ItemListContainer/>}/>
           <Route path='/item/:idGame' element={<ItemDetailContainer/>}/>
+          <Route path='/cart' element={<Cart/>}/>
         </Routes>
         <Footer />
       </div>
