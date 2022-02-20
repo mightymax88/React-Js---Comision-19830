@@ -17,7 +17,7 @@ const gamesInfo = [
         thumbnail: "https://m.media-amazon.com/images/I/51NgDXzErYL._SY445_.jpg",
         category: "Aventura",
         description: "Videojuego de plataformas en tres dimensiones para Nintendo Switch.",
-        stock: "0",
+        stock: "3",
         developer: "Nintendo Entertainment Planning & Development",
         saga: "mario"
     },
@@ -39,7 +39,7 @@ const gamesInfo = [
         thumbnail: "https://m.media-amazon.com/images/I/81-QH2Lyy4L._SL1500_.jpg",
         category: "RPG",
         description: "Prepárate para la próxima aventura Pokémon con Pokémon™ Sword.",
-        stock: "2",
+        stock: "4",
         developer: "Game Freak",
         saga: "pokemon"
     },
@@ -50,7 +50,7 @@ const gamesInfo = [
         thumbnail: "https://m.media-amazon.com/images/I/81lwcYUU9TL._SL1500_.jpg",
         category: "RPG",
         description: "Prepárate para la próxima aventura Pokémon con Pokémon™ Shield.",
-        stock: "7",
+        stock: "0",
         developer: "Game Freak",
         saga: "pokemon"
     },
@@ -61,7 +61,7 @@ const gamesInfo = [
         thumbnail: "https://m.media-amazon.com/images/I/814JycwAkrL._SL1500_.jpg",
         category: "Plataforma",
         description: "Juegos de plataformas retro con gráficos en 2D de pixelado perfecto a 60 fps.",
-        stock: "2",
+        stock: "7",
         developer: "Headcannon",
         saga: "sonic"
     }

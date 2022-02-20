@@ -1,12 +1,14 @@
 //import React,{useEffect, useState} from 'react';
 import ItemCount from './ItemCount';
 import { Link } from 'react-router-dom';
-import {useState } from 'react';
+import {useState, useContext } from 'react';
+import { CartContext } from './CartContext';
 //import GoToCart from './GoToCart';
 
 const ItemDetail = (props) => {
     const games=props.games;
     const [bandera,setBandera] = useState(0);
+    const test = useContext(CartContext);
 
     const onAdd = (cant,stockItem) => {
         return new Promise((resolve,reject) => {
@@ -17,6 +19,7 @@ const ItemDetail = (props) => {
                     alert("Se agregarán "+cant+" unidades al Carrito"),
                 );
                 setBandera(cant);
+                test.addToCart(games,cant);
             }
         })
     }

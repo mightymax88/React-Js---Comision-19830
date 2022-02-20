@@ -18,7 +18,7 @@ function ItemCount({stock,initial,onAdd,bandera}){
             setCantItem(cantItem+1);
         }
     }
-    //componentDidUpdate - Para uso futuro
+    //componentDidUpdate
     useEffect(()=> {
         setStock(stock)
         setCantItem(parseInt((stock==="0"||stock===0)?"0":initial))

@@ -145,3 +145,17 @@ input{
   margin-bottom:0;
 }
 /* Termina pie de página --------------------------------------------- */
+
+/* Acá va el código del Carrito */
+.cabezalCarrito{
+  margin-bottom:10px;
+}
+
+.cartItem{
+  margin-top:15px;
+  text-align:center;
+  font-size:16px;
+  margin-bottom:10px;
+  border-style:groove;
+  border-color:aliceblue;
+}
