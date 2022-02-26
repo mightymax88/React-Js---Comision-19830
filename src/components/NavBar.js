@@ -15,8 +15,8 @@ const Navbar = () =>{
                         <Link to={'/category/mario'}><button type="button" class="btn btn-light">Mario</button></Link>
                         <Link to={'/category/sonic'}><button type="button" class="btn btn-light">Sonic</button></Link>
                     </div>
-                    <div className="col navRight">
-                        <button type="button" class="btn btn-dark">Contacto</button>
+                    <div className="col-5 navRight">
+                        {/* <button type="button" class="btn btn-dark">Contacto</button> */}
                         <input className="barraBusq" type="search" placeholder="Buscar ..." aria-label="Search"/>
                         <button className="btn btn-outline-danger" type="submit">Buscar</button>
                         <CartWidget />

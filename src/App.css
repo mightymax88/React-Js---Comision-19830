@@ -46,12 +46,12 @@
 }
 
 .navLeft{
-  display: flex;
+  display: inline-flex;
   justify-content: left;
 }
 
 .navRight{
-  display: flex;
+  display: inline-flex;
   justify-content:flex-end;
 }
 
@@ -146,6 +146,15 @@ input{
 }
 /* Termina pie de página --------------------------------------------- */
 
+.carritoVacio{
+  padding-top: 30px;
+  text-align:center;
+  font-size:26px;
+  color: red;
+  margin-bottom:10px;
+  border-radius: 10px;
+}
+
 /* Acá va el código del Carrito */
 .cabezalCarrito{
   margin-bottom:10px;
@@ -158,4 +167,21 @@ input{
   margin-bottom:10px;
   border-style:groove;
   border-color:aliceblue;
+}
+
+.cartTotal{
+  text-align:center;
+}
+
+.cartFlow{
+  display: inline-block;
+}
+
+.cartIcon{
+  text-align: right;
+}
+
+.cartNumber{
+  text-align: left;
+  justify-content: left;
 }
