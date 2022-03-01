@@ -25,7 +25,7 @@ const ItemDetail = (props) => {
                 resolve(alert("Lamentablemente, no hay stock"));
             } else {
                 reject(
-                    alert("Se agregarán "+cant+" unidades al Carrito"),
+                    setBandera(cant),
                 );
                 setBandera(cant);
                 test.addToCart(games,cant);
@@ -55,8 +55,13 @@ const ItemDetail = (props) => {
                             <br/>
                             <p>Stock disponible: {parseInt(games.stock)}</p>
                             {bandera===0
-                                ?<ItemCount stock={games.stock} initial="1" onAdd={onAdd} bandera={bandera}/>
-                                :<Link to={'/cart'}><button type="button">Finalizar compra</button></Link>
+                                ?
+                                    <ItemCount stock={games.stock} initial="1" onAdd={onAdd} bandera={bandera}/>
+                                :
+                                    <>
+                                        <p>Se agregaron las unidades solicitadas al carrito!</p>
+                                        <Link to={'/cart'}><button type="button">Finalizar compra</button></Link>
+                                    </>
                             }
                         </div>
                     </div>
