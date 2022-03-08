@@ -2,10 +2,49 @@ import React, { useContext } from 'react';
 import { CartContext } from './CartContext';
 import emptyCart from './imagenes/mario-cart.jpeg';
 import { Link } from 'react-router-dom';
+import {serverTimestamp, setDoc, doc, collection, increment, updateDoc} from "firebase/firestore";
+import db from '../utils/firebaseConfig';
 
 const Cart = () =>{
     const test = useContext(CartContext);
 
+    const createOrder = () => {
+        let order = {
+            buyer: {
+                email: "maxi@gmail.com",
+                name: "Maxi",
+                phone: "1122334455"
+            },
+            date: serverTimestamp(),
+            items: test.cartList.map((item) => {return {
+                id: item.id,
+                price: item.price,
+                title: item.name,
+                qty: item.qty
+            }}),
+            total: test.totalCart
+        }
+
+        const createOrderInFirestore = async () => {
+            const newOrderRef = doc(collection(db, "orders"));
+            await setDoc(newOrderRef, order);
+            return newOrderRef;
+        }
+    
+        createOrderInFirestore()
+            .then((result) => {
+                alert("Su orden ha sido procesada (Nro.): " + result.id);
+                test.cartList.map(async(item) =>{
+                    const itemRef = doc(db,'games',item.id.toString());
+                    await updateDoc(itemRef, {
+                        stock: increment(-item.qty),
+                    });
+                });
+                test.clear();
+            })
+            .catch((error) => console.log(error))
+    }
+    
     return (
         <div className='row'>
             <div className='cabezalCarrito'>
@@ -61,6 +100,7 @@ const Cart = () =>{
                             </div>
                             <div className='col-2 cartTotalPrice'>
                                 <h3>${test.totalCart}</h3>
+                                <input className="ip" type="button" value={"Confirmar compra"} onClick={() => createOrder()}/>
                             </div>
                         </>
                         :
