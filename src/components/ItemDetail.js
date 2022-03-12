@@ -24,9 +24,6 @@ const ItemDetail = (props) => {
             if (stockItem===0||stockItem==="0") {
                 resolve(alert("Lamentablemente, no hay stock"));
             } else {
-                reject(
-                    setBandera(cant),
-                );
                 setBandera(cant);
                 test.addToCart(games,cant);
             }

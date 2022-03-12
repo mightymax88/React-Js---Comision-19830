@@ -31,7 +31,7 @@ function ItemCount({stock,initial,onAdd,bandera}){
             <div id="cosaCompra">
                 <p id="pitem"> 
                         <input className="ip" type="button" value="-" onClick={() => restoCant()}/>
-                        <input className="ip" id="txCart" type="number" value={cantItem}/>
+                        <input className="ip" id="txCart" type="number" defaultValue={cantItem}/>
                         <input className="ip" type="button" value="+" onClick={() => sumoCant()}/>
                 </p> 
             </div>

@@ -10,10 +10,10 @@ const Navbar = () =>{
                 <div className='row'>
                     <div className="col navLeft">
                         <img alt='logo' src={logo} width="50" height="40"/>
-                        <Link to={'/'}><button type="button" class="btn btn-danger">NintendAR</button></Link>
-                        <Link to={'/category/pokemon'}><button type="button" class="btn btn-light">Pokemón</button></Link>
-                        <Link to={'/category/mario'}><button type="button" class="btn btn-light">Mario</button></Link>
-                        <Link to={'/category/sonic'}><button type="button" class="btn btn-light">Sonic</button></Link>
+                        <Link to={'/'}><button type="button" className="btn btn-danger">NintendAR</button></Link>
+                        <Link to={'/category/pokemon'}><button type="button" className="btn btn-light">Pokemón</button></Link>
+                        <Link to={'/category/mario'}><button type="button" className="btn btn-light">Mario</button></Link>
+                        <Link to={'/category/sonic'}><button type="button" className="btn btn-light">Sonic</button></Link>
                     </div>
                     <div className="col-5 navRight">
                         {/* <button type="button" class="btn btn-dark">Contacto</button> */}

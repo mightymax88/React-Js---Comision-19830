@@ -16,8 +16,10 @@ const Cart = () =>{
                 phone: "1122334455"
             },
             date: serverTimestamp(),
+            key: serverTimestamp(),
             items: test.cartList.map((item) => {return {
                 id: item.id,
+                key: item.id,
                 price: item.price,
                 title: item.name,
                 qty: item.qty
@@ -84,7 +86,7 @@ const Cart = () =>{
                         <div className='row justify-content-md-center'>
                             <div className='col-4 align-self-center carritoVacio'>
                                 <h3>El carrito está vacío</h3>
-                                <Link to={'/'}><button type="button" class="btn btn-light">Volver al listado</button></Link>
+                                <Link to={'/'}><button type="button" className="btn btn-light">Volver al listado</button></Link>
                                 <img alt='emptyCart' src={emptyCart} width="400" height="300"/>  
                             </div>
                         </div>
